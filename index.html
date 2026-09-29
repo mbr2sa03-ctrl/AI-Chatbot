@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Project Assistance AI</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><div class="logo">PA</div><div><strong>Project Assistance AI</strong><span>Document Assistant</span></div></div>
+      <button id="newChat" class="new-chat">＋ New conversation</button>
+      <nav>
+        <button class="nav-item active" data-view="chat">💬 Ask My Documents</button>
+        <button class="nav-item" data-view="drive">📁 Google Drive</button>
+        <button class="nav-item" data-view="knowledge">📚 Knowledge Base</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div id="authStatus">Not signed in</div>
+        <button id="signIn" class="outline">Sign in with Google</button>
+        <button id="signOut" class="outline hidden">Sign out</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <div class="eyebrow">AI PROJECT ASSISTANT</div>
+          <h1 id="pageTitle">Ask My Documents</h1>
+        </div>
+        <div id="userBadge" class="user-badge hidden"></div>
+      </header>
+
+      <section id="chatView" class="view">
+        <div id="welcome" class="welcome">
+          <div class="hero-icon">✦</div>
+          <h2>How can I help you?</h2>
+          <p>Ask questions about your connected Google Drive documents and get answers from your project knowledge base.</p>
+          <div class="suggestions">
+            <button>Summarize the latest project report</button>
+            <button>What are the main project risks?</button>
+            <button>Find the most recent monitoring data</button>
+          </div>
+        </div>
+        <div id="messages" class="messages"></div>
+        <div id="loading" class="loading hidden"><span></span><span></span><span></span> Thinking…</div>
+        <form id="chatForm" class="composer">
+          <textarea id="question" rows="1" placeholder="Ask about your documents…" autocomplete="off"></textarea>
+          <button id="sendBtn" type="submit" aria-label="Send">➤</button>
+        </form>
+        <p class="privacy">Your documents remain protected by Firebase authentication and server-side access controls.</p>
+      </section>
+
+      <section id="driveView" class="view hidden">
+        <div class="card">
+          <div class="card-icon">📁</div><h2>Connect Google Drive</h2>
+          <p>Connect your authorized Google Drive folders so the assistant can index project documents.</p>
+          <button id="connectDrive" class="primary">Connect Google Drive</button>
+          <p class="muted">Drive OAuth and folder selection are handled by the backend. Configure the endpoint before production use.</p>
+        </div>
+      </section>
+
+      <section id="knowledgeView" class="view hidden">
+        <div class="card">
+          <div class="card-icon">📚</div><h2>Knowledge Base</h2>
+          <p id="knowledgeText">Connect Google Drive to begin indexing documents.</p>
+          <div class="status-row"><span class="dot"></span><span>Ready for Firebase / Gemini File Search</span></div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
