@@ -6,12 +6,12 @@ import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChang
 import { getFunctions, httpsCallable } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-functions.js";
 
 const firebaseConfig = {
-  apiKey: "YOUR_FIREBASE_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT.firebasestorage.app",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyAbwATpTFb4giOqPYMMrt8ZFv-z1OECsEA",
+  authDomain: "ai-chatbot-3e90e.firebaseapp.com",
+  projectId: "ai-chatbot-3e90e",
+  storageBucket: "ai-chatbot-3e90e.firebasestorage.app",
+  messagingSenderId: "839104659698",
+  appId: "1:839104659698:web:9e74fdb2ce7601ab2c506b"
 };
 
 const app = initializeApp(firebaseConfig);
